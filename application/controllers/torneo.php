@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class torneo extends CI_Controller {
+class Torneo extends CI_Controller {    
 
     public function __construct() {
         parent::__construct();
@@ -13,9 +13,8 @@ class torneo extends CI_Controller {
      * Carga el vector con el equipo 
      */
     public function index() {        
-        $data['teams'] = $this->torneoModel->getTeams();
-        $data['tourn'] = $this->torneoModel->createTourn(data['teams']);
-        $this->load->view("torneoView", $this->data);
+        $this->data['teams'] = $this->torneoModel->getTeams();        
+        $this->load->view("teams", $this->data);
     }
 
     public function insertTeam() {

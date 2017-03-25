@@ -6,7 +6,7 @@
 		<link rel="SHORTCUT ICON" href="<?= base_url() . 'assets/img/favicon.ico'?>" />
 		<link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
 	</head>
-	
+	<body style="background-color: #2E393A">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"

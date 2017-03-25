@@ -4,7 +4,7 @@
 		<title>DevTorGame</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="SHORTCUT ICON" href="<?= base_url() . 'assets/img/favicon.ico'?>" />
-		<link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
+		<link href="<?= base_url() . '//assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
 		<script src="<?= base_url() . 'assets/js/jquery.js' ?>"></script>
 		<script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
 		<script src = "<?= base_url() . 'assets/js/tournament.js' ?>"></script>

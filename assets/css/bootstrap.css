@@ -17,7 +17,32 @@ body {
 	background-color: red;
 }
 .font-table-add{
-	color: white;
+    color: white;
+    background: #232323;
+}
+.tab-center{
+    text-align: center;
+    align-items: center;
+}
+.tab-center-header{
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.tab-center-nameTeam{
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+    border-collapse: collapse;
+    border-spacing: 5px 15px;   
+}
+.btn-like{
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    text-align: center;
+    align-items: center;
 }
 .vista-menu{
 	border: none;

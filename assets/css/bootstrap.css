@@ -13,6 +13,78 @@ html {
 body {
 	margin: auto;
 }
+.btn-add-tournamet-validate{
+	border: none;
+	background-color: transparent !important;
+	font-size: 14px;
+	font-family: "Arial";
+	font-weight: 500;
+	color: black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+.btn-color{
+	width: 30px;
+	height: 30px;
+	padding: 6px 0;
+	font-size: 12px;
+	line-height: 1.42;
+	border-radius: 15px;
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btn-update-imag{
+	position:absolute;
+	top:80%;
+	left:88%;
+	width:30px;
+	height:30px;
+}
+.text-name-tournament{
+	background-color: transparent;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	color: white;
+	font-size: 25dpx;
+	margin: 20px;
+	width: 90%;
+	border-bottom-color: #fff;
+	overflow:auto;
+}
+.add-dates-tournametn{
+	background-color: #029AE4;
+	padding: 10px;
+}
+.add-img-btn{
+	cursor: pointer;
+}
+.font-text-icon{
+	color: #818181;
+}
+.icon-add-tournament{
+	margin-top: 1em;
+	margin-left: 1em;
+	width: 3em;
+	height: 3em;
+}
+.add-tournament{
+	background-color: white;
+	border: none;
+	align-items: center;
+	margin-top: 50px;
+	height: 270px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.img-add-tournament{
+	margin-top: -20px;
+	margin-left: -16px;
+	height: 340px;
+	width: 103%;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .color.font-add{
 	background-color: red;
 }

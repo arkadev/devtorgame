@@ -19,6 +19,8 @@ class Team extends CI_Controller {
 
     public function insertTeam() {
         $data['name'] = $this->input->post("name");
+        $data['id_tournament'] = "1";
+        $data['id_phase'] = "1";
         $this->teamModel->insertTeam($data);
     }
 }

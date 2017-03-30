@@ -4,7 +4,7 @@ function insertTeam() {
         name: $('#name').val()
     };
     $.ajax({
-        url: 'torneo/insertTeam',
+        url: 'team/insertTeam',
         data: data,
         type: 'post',
         success: function () {

@@ -4,12 +4,8 @@
 		<title>DevTorGame</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>" />
-		<script>
-			function coloBtn(id){
-				document.getElementById("baner-color").style.backgroundColor = document.getElementById(id).style.backgroundColor;			
-			}
-		</script>
+		<link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>" />
+		<script src = "<?= base_url() . 'assets/js/tournaments.js' ?>"></script>
 	</head>
 	<body style="background-color: #EEEEEE">
 		<div class="row">
@@ -122,6 +118,7 @@
 			</div>
 		</div>
 		<script src="<?= base_url() . 'assets/js/jquery.js' ?>"></script>	
-        <script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
+		<script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
+		<script src="<?= base_url() . 'assets/js/tournaments.js' ?>"></script>
 	</body>
 </html>

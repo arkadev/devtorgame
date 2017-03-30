@@ -1,6 +1,6 @@
 <?php
 
-class TorneoModel extends CI_Controller {
+class TeamModel extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -25,19 +25,5 @@ class TorneoModel extends CI_Controller {
         } else {
             return false;
         }
-    }
-    /**
-     * Retorna un vector con los equipos ordenados aleatoreamente
-     * @param type $data     
-     */
-    public function createTourn() {
-        $data = $this->db->query("select * from team order by rand()");
-        if ($data->num_rows() > 0) {
-            $data = $data->result();
-            return $data;
-        } else {
-            return false;
-        }
-    }
-
+    }    
 }

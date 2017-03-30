@@ -16,24 +16,26 @@
 CREATE DATABASE IF NOT EXISTS `torneo` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `torneo`;
 
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla torneo.tournament
 CREATE TABLE IF NOT EXISTS `tournament` (
-  `id_tournament` int(11) NOT NULL,
+  `id_tournament` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(21) NOT NULL,
   `image_url` varchar(45) NOT NULL,
   PRIMARY KEY (`id_tournament`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Volcando estructura para tabla torneo.phase
 CREATE TABLE IF NOT EXISTS `phase` (
-  `id_phase` int(2) NOT NULL,
+  `id_phase` int(2) NOT NULL AUTO_INCREMENT,
   `id_tournament` int(11) NOT NULL,
   `name` varchar(10) NOT NULL,
   PRIMARY KEY (`id_phase`,`id_tournament`),
   KEY `fk_phase_tournament1_idx` (`id_tournament`),
   CONSTRAINT `fk_phase_tournament1` FOREIGN KEY (`id_tournament`) REFERENCES `tournament` (`id_tournament`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+-- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla torneo.team
 CREATE TABLE IF NOT EXISTS `team` (
   `id_team` int(11) NOT NULL AUTO_INCREMENT,
@@ -43,8 +45,11 @@ CREATE TABLE IF NOT EXISTS `team` (
   PRIMARY KEY (`id_team`,`id_phase`,`id_tournament`),
   KEY `fk_team_phase1_idx` (`id_phase`,`id_tournament`),
   CONSTRAINT `fk_team_phase1` FOREIGN KEY (`id_phase`, `id_tournament`) REFERENCES `phase` (`id_phase`, `id_tournament`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+
+
+-- La exportación de datos fue deseleccionada.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

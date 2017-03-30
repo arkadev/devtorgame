@@ -12,6 +12,9 @@ function insertTeam() {
         }
     });
 };
+
+
+
 //Crea el torneo por medio del controlador torneo
 function createTourn() {
     $.ajax({   

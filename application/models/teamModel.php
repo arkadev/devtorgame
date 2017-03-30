@@ -5,7 +5,8 @@ class TeamModel extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->database();
-    }
+    }		
+	
     /**
      * inserta un equipo a la base de datos
      * @param type $data

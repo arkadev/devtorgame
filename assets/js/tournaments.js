@@ -29,3 +29,16 @@ function coloBtn(id){
 	document.getElementById("baner-color").style.backgroundColor = document.getElementById(id).style.backgroundColor;			
 };
             
+function insertTournament() {
+    data = {
+        name: $('#name').val()		
+    };
+    $.ajax({
+        url: 'teamcreate/insertTournament',
+        data: data,
+        type: 'post',
+        success: function () {
+            location.reload();
+        }
+    });
+};

@@ -6,6 +6,13 @@ class TournamentModel extends CI_Controller {
         parent::__construct();
         $this->load->database();
     }   
+	
+	public function insertTournament($data) {
+        $this->db->insert('tournament', $data);
+		$aux['id_tournament'] = "1";
+		$aux['name'] = "A";
+		$this->db->insert('phase', $aux);
+    }
     /**
      * Retorna un vector con los equipos ordenados aleatoreamente
      * @param type $data     

@@ -1,6 +1,6 @@
 <?php
 
-class TournamentModel extends CI_Controller {
+class TournamentModel extends CI_Model {
 
     public function __construct() {
         parent::__construct();
@@ -22,6 +22,16 @@ class TournamentModel extends CI_Controller {
         if ($data->num_rows() > 0) {
             $data = $data->result();
             return $data;
+        } else {
+            return false;
+        }
+    }
+
+    public function getPhases() {
+        $data = $this->db->query("select* from phase");        
+        if ($data->num_rows() > 0) {
+            $data = $data->result();            
+            return $data;        
         } else {
             return false;
         }

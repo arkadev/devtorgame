@@ -1,4 +1,4 @@
-//Inserta un equipo a la base de datos por medio del controlador torneo
+//Inserta un equipo a la base de datos por medio del controlador team
 function insertTeam() {
     data = {
         name: $('#name').val()
@@ -11,7 +11,7 @@ function insertTeam() {
             location.reload();
         }
     });
-}
+};
 //Crea el torneo por medio del controlador torneo
 function createTourn() {
     $.ajax({   
@@ -20,14 +20,14 @@ function createTourn() {
             location.reload();
         }
     });
-}
+};
 
 function isImpar(){	
 	$(function () {				
 		if(($("#tableTeams tr").length-1)%2==1){						
 			$("#myModal").modal();
 		}else{
-			location.href="http://127.0.0.1/devtorgame/index.php/tournament";
+			location.href="tournament";
 		}
 	});
 };

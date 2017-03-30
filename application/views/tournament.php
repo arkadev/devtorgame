@@ -4,25 +4,8 @@
         <title>DevTorGame</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>" />
-        <script language="javascript">
-            function cambiar(id_val){ 
-                var image1 = "<?= base_url() . 'assets/img/LikeGreen.png'?>";
-                var image2 = "<?= base_url() . 'assets/img/Dislike.png'?>";
-                var a=  parseInt(id_val.charAt(4));
-                if(document.images["like".concat(a+1)]!=null){
-                    if(a%2==0){                    
-                        document.images[id_val].src=image1;
-                        document.images["like".concat(a+1)].src=image2;
-                    }else{
-                        document.images[id_val].src=image1;
-                        document.images["like".concat(a-1)].src=image2;    
-                    }
-                }
-            };            
-        </script>
-
-
+        <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>" />  
+        <script src = "<?= base_url() . 'assets/js/tournaments.js' ?>"></script>
     </head>
     <body style="background-color: #2E393A">
         <nav class="navbar navbar-default" role="navigation">

@@ -7,7 +7,7 @@
 		<link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>">
 		<script src="<?= base_url() . 'assets/js/jquery.js' ?>"></script>
 		<script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
-		<script src = "<?= base_url() . 'assets/js/tournament.js' ?>"></script>
+		<script src = "<?= base_url() . 'assets/js/team.js' ?>"></script>
 		<script>validateName();disabledInitTourn();keyEnterInsertTeam();</script>		
 	</head>
 	<body style="background-color: #2E393A" >

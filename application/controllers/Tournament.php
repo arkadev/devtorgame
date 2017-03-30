@@ -17,5 +17,5 @@ class Tournament extends CI_Controller {
     public function index() {                
         $this->data['tourn'] = $this->tournamentModel->createTourn();
         $this->load->view("tournament", $this->data);
-    }    
+    }
 }

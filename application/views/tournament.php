@@ -47,8 +47,8 @@
                                 <th class="tab-center-header">#</th>
                             </tr>   
                             <?php
-    if (is_array($tourn) || is_object($tourn)) {
-        for ($i = 0; $i < count($tourn); $i++) {
+                            if (is_array($tourn) || is_object($tourn)) {
+                                for ($i = 0; $i < count($tourn); $i++) {
                             ?>
 
                             <tr class="tab-center">

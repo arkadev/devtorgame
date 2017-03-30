@@ -22,7 +22,7 @@ class unit_test extends CI_Controller {
 				
 			echo "Unit Test 2 getTeams";				
 			$test_name = "Esta vacio";
-			echo $this->unit->run(count($teams),3,$test_name);
+			echo $this->unit->run((count($teams)>0),true,$test_name);
 			
 			echo "Unit Test 3 createTourn";				
 			$test_name = "¿Se puede crear un torneo?";			

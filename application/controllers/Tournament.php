@@ -9,13 +9,13 @@ class Tournament extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
-        $this->load->model("torneoModel");
+        $this->load->model("tournamentModel");
     }
     /**
      * Carga el vector con el equipo 
      */
     public function index() {                
-        $this->data['tourn'] = $this->torneoModel->createTourn();
+        $this->data['tourn'] = $this->tournamentModel->createTourn();
         $this->load->view("tournament", $this->data);
     }    
 }

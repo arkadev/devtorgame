@@ -24,7 +24,7 @@
 		</div>
 		<div class="row">	
 			<div class="col-xs-12 col-sm-12 col-md-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-6 margin-btn-init" >
-				<a href="index.php/torneo">
+				<a href="index.php/team">
 					<button type="button" class="btn-font-init">COMENZAR</button>
 				</a>
 			</div>	

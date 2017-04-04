@@ -7,8 +7,7 @@ class Welcome extends CI_Controller {
         $this->load->helper(array('form', 'url'));        
     }
 	
-	public function index()
-	{
+	public function index(){
 		$this->load->view('index');
 	}
 }

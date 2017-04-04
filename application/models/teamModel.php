@@ -19,7 +19,7 @@ class TeamModel extends CI_Controller {
      * @return type $data or false
      */
     public function getTeams() {
-        $data = $this->db->query("select* from team");
+        $data = $this->db->query("select * from team");
         if ($data->num_rows() > 0) {
             $data = $data->result();
             return $data;

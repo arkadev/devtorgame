@@ -15,7 +15,17 @@ class Tournament extends CI_Controller {
      * Carga el vector con el equipo 
      */
     public function index() {                
-        $this->data['tourn'] = $this->tournamentModel->createTourn();
+        $this->data['tournaments'] = $this->tournamentModel->getTournaments();
         $this->load->view("tournament", $this->data);
+    }
+    /**
+    * Metodo del controlador que envia los datos a el modelo
+    */
+    public function insertTournament(){
+        $data['name'] = $this->input->post("name");
+        $data['description'] = $this->input->post("description");
+        $data['image_url'] = $this->input->post("image_url");
+        $data['color'] = $this->input->post("color");
+        $this->teamModel->insertTournament($data);
     }
 }

@@ -13,14 +13,12 @@ class Team extends CI_Controller {
      * Carga el vector con el equipo 
      */
     public function index() {        
-        $this->data['teams'] = $this->teamModel->getTeams();        
-        $this->load->view("teams", $this->data);
+        $this->data['teams'] = $this->teamModel->getTeams();
+        $this->load->view("team_view", $this->data);
     }
 
     public function insertTeam() {
         $data['name'] = $this->input->post("name");
-        $data['id_tournament'] = "1";
-        $data['id_phase'] = "1";
         $this->teamModel->insertTeam($data);
     }
 }

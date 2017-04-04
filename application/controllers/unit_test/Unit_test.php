@@ -23,8 +23,6 @@ class unit_test extends CI_Controller {
 				$id_phase[$i] = $tourn[$i]->id_phase;
 			}
 
-			echo in_array("A", $names_phase)?"SI___________":"NO_____________";
-
 			echo "Unit Test 1 getTeams";
 			$test_name = "Es arreglo";
 			echo $this->unit->run($teams,'is_array',$test_name);

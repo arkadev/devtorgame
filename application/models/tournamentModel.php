@@ -8,17 +8,15 @@ class TournamentModel extends CI_Model {
     }   
 	
 	public function insertTournament($data) {
-        $this->db->insert('tournament', $data);
-		$aux['id_tournament'] = "1";
-		$aux['name'] = "A";
-		$this->db->insert('phase', $aux);
+        $this->db->insert('tournament', $data);		
+		$this->db->insert('phase');
     }
     /**
-     * Retorna un vector con los equipos ordenados aleatoreamente
+     * Retorna un vector con los torneos
      * @param type $data     
      */
-    public function createTourn() {        
-        $data = $this->db->query("select id_team, name from team order by rand()");
+    public function getTournaments() {        
+        $data = $this->db->query("select * from tournament");
         if ($data->num_rows() > 0) {
             $data = $data->result();
             return $data;
@@ -26,19 +24,4 @@ class TournamentModel extends CI_Model {
             return false;
         }
     }
-
-    public function getPhases() {
-        $data = $this->db->query("select* from phase");        
-        if ($data->num_rows() > 0) {
-            $data = $data->result();            
-            return $data;        
-        } else {
-            return false;
-        }
-    }
-
-    public function insertPhase($data){
-        $this->db->insert('phase', $data);
-    }
-
 }

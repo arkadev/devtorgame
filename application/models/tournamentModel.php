@@ -8,8 +8,8 @@ class TournamentModel extends CI_Model {
     }   
 	
 	public function insertTournament($data) {
-        $this->db->insert('tournament', $data);		
-		$this->db->insert('phase');
+        $this->db->insert('tournament', $data);        
+		$this->db->insert('phase', $data->id_tournament);
     }
     /**
      * Retorna un vector con los torneos

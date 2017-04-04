@@ -20,8 +20,7 @@ CREATE TABLE IF NOT EXISTS `tournament` (
 
 CREATE TABLE IF NOT EXISTS `phase` (
   `id_phase` int(11) NOT NULL AUTO_INCREMENT,
-  `id_tournament` int(11) NOT NULL,
-  `name` varchar(21) NOT NULL,
+  `id_tournament` int(11) NOT NULL,  
   PRIMARY KEY (`id_phase`,`id_tournament`),
   KEY `fk_phase_tournament2_idx` (`id_tournament`),
   CONSTRAINT `fk_phase_tournament2` FOREIGN KEY (`id_tournament`) REFERENCES `tournament` (`id_tournament`) ON DELETE NO ACTION ON UPDATE NO ACTION

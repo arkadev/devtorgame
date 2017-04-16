@@ -1,6 +1,8 @@
 //Inserta un equipo a la base de datos por medio del controlador team
-function insertTeam() {
+function insertTeam(name_tournament) {
+    console.log(name_tournament);     
     data = {
+        name_tournament: name_tournament,
         name: $('#name').val()
     };
     $.ajax({
@@ -10,7 +12,7 @@ function insertTeam() {
         success: function () {
             location.reload();
         }
-    });
+    });    
 };
 
 

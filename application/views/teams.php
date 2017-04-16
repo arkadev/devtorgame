@@ -10,7 +10,7 @@
 		<script src = "<?= base_url() . 'assets/js/team.js' ?>"></script>
 		<script>validateName();disabledInitTourn();keyEnterInsertTeam();</script>		
 	</head>
-	<body style="background-color: #2E393A" >
+	<body style="background-color: #2E393A" >	
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -39,12 +39,15 @@
 			</div>
 		</nav>
 		<div class="container-fluid">
+		<div id="name_tournament">
+		    <p style="color:#FF0000";><?php $name_tournament=($_GET['name_tournament']); echo "$name_tournament"; ?></p>
+		</div>		
 			<div class="row">
 				<div class="col-xs-8 col-sm-8 col-md-3">
 					<input type="text" id="name" class="form-control" placeholder="Nombre de equipo" >
 				</div>
 				<div class="col-xs-4 col-sm-4 col-md-3 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 btn-add-margin">
-					<button id="insertTeam" type="buttonAdd" value="sent" disabled="true" onclick="insertTeam()" class="btn btn-success btn-circle btn-lg ">
+					<button id="insertTeam" type="buttonAdd" value="sent" disabled="true" onclick="insertTeam('<?php $name_tournament=($_GET['name_tournament']); echo "$name_tournament"; ?>')" class="btn btn-success btn-circle btn-lg ">
 						<span class="glyphicon glyphicon-check"></span>
 					</button>
 				</div>
@@ -94,7 +97,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-						<a href="<?= base_url() . 'index.php/tournament'?>">
+						<a href="<?= base_url() . 'index.php/tournament'?>?name_tournament=<?php  $name_tournament=($_GET['name_tournament']); echo "$name_tournament"; ?>">						
 							<button type="buttonAdd" class="btn btn-primary">Continuar</button>
 						</a>
 					</div>

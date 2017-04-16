@@ -1,26 +1,41 @@
+
 CREATE DATABASE IF NOT EXISTS `torneo`;
 USE `torneo`;
 
-CREATE TABLE IF NOT EXISTS `team` (
-  `id_team` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(25) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id_team`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+CREATE TABLE IF NOT EXISTS `user` (
+  `email` varchar(45) NOT NULL,
+  `user_name` varchar(12) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `tournament` (
   `id_tournament` int(11) NOT NULL AUTO_INCREMENT,
+  `user_email` varchar(45) NOT NULL,
   `name` varchar(21) NOT NULL,
   `description` varchar(45) NOT NULL,
   `image_url` varchar(45) NOT NULL,
   `color` varchar(8) NOT NULL,
-  PRIMARY KEY (`id_tournament`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
+  PRIMARY KEY (`id_tournament`,`user_email`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  KEY `fk_tournament_user1_idx` (`user_email`),
+  CONSTRAINT `fk_tournament_user1` FOREIGN KEY (`user_email`) REFERENCES `user` (`email`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `team` (
+  `id_team` int(11) NOT NULL AUTO_INCREMENT,
+  `id_tournament` int(11) NOT NULL,
+  `name` varchar(25) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id_team`,`id_tournament`),
+  UNIQUE KEY `name_UNIQUE` (`name`),
+  KEY `fk_team_tournament1_idx` (`id_tournament`),
+  CONSTRAINT `fk_team_tournament1` FOREIGN KEY (`id_tournament`) REFERENCES `tournament` (`id_tournament`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 CREATE TABLE IF NOT EXISTS `phase` (
   `id_phase` int(11) NOT NULL AUTO_INCREMENT,
-  `id_tournament` int(11) NOT NULL,  
+  `id_tournament` int(11) NOT NULL,
+  `name` varchar(21) NOT NULL,
   PRIMARY KEY (`id_phase`,`id_tournament`),
   KEY `fk_phase_tournament2_idx` (`id_tournament`),
   CONSTRAINT `fk_phase_tournament2` FOREIGN KEY (`id_tournament`) REFERENCES `tournament` (`id_tournament`) ON DELETE NO ACTION ON UPDATE NO ACTION

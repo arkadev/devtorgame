@@ -443,7 +443,7 @@ body {
     resize:none;
     font-size: 20px;
     font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
-    width: 400px;
+    width: 600px;
     text-align: justify;
 }
 
@@ -455,7 +455,7 @@ body {
 .text-baner-2-title{
     position: absolute;
     top: 30%;
-    left: 20%;
+    left: 10%;
 }
 .img-campeon{
     position: absolute;    

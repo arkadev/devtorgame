@@ -1,4 +1,4 @@
-<!DOCTYPE HTML> 
+﻿<!DOCTYPE HTML> 
 <html lang="es">
     <head>
         <title>DevTorGame</title>
@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <meta url="https://www.facebook.com/arkadev.sas.1?fref=ts">
         <meta url="https://twitter.com/ArkaDevGroup">
+		<link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>" />
     </head>
     <body>
         <div class="baner-init">
@@ -85,7 +86,7 @@
                     </div>
                     <div class="col-md-4">
                         <ul class="list-inline quicklinks">
-                            <li><a href="https://arkadev.me/devtorgame">arkadev.me/devtorgame</a></li>
+                            <li><a href="http://arkadev.me/devtorgame">arkadev.me/devtorgame</a></li>
                         </ul>
                     </div>
                 </div>

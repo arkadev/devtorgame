@@ -29,9 +29,17 @@ function coloBtn(id){
     document.getElementById("baner-color").style.backgroundColor = document.getElementById(id).style.backgroundColor;			
 };
 
+function getValues(){      
+      
+      var description = document.getElementById("description").value;
+//      var image_url = hexc(document.getElementById('image-baner').src);
+      
+    console.log(description);
+};
+
 function insertTournament() {
-    console.log("entro");
-    var color = document.getElementById("baner-color").style.backgroundColor;
+    var color = document.getElementById('baner-color').style.backgroundColor;
+    var name = document.getElementById("name").value;
     data = {
         name: $('#name').val(),
         description: $('#description').val(),

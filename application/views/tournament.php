@@ -3,11 +3,43 @@
     <head>
         <title>DevTorGame</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
+        <link href="<?= base_url() . 'assets/css/styles.css' ?>" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico'?>" />  
         <script src = "<?= base_url() . 'assets/js/tournaments.js' ?>"></script>
     </head>
     <body style="background-color: #2E393A">
+	
+	<div class="baner-login">
+			<nav class="nav-menu">
+				<ul>
+					<img src="<?= base_url() . 'assets/img/logoD.png'?>" class="img-menu-nav">
+					<p class="text-logo-menu">DevTorGame</p>
+				</ul>
+				<div class="div-user">
+					<a href="" title="Usuario">
+						<img src="<?= base_url() . 'assets/img/user.png'?>" class="user-icon">
+						<p class="user-text">CamiloB</p>
+					</a>
+					<a href="" title="Cerrar sesion">
+						<img src="<?= base_url() . 'assets/img/exit.png'?>" class="exit-menu">
+					</a>
+				</div>	
+			</nav>
+			<nav class="baner-menu-r">
+				<ul>
+
+				</ul>
+			</nav>
+			<div class="div-tournaments-create">
+				<a href="">
+					<div class="cart-create">
+						<img src="<?= base_url() . 'assets/img/add.png'?>" class="img-cart">
+						<p class="text-cart">Crear torneo</p>
+					</div>
+				</a>
+			</div>
+		</div>	
+	
         <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"

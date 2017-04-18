@@ -30,6 +30,7 @@ function coloBtn(id){
 };
 
 function insertTournament() {
+    console.log("entro");
     var color = document.getElementById("baner-color").style.backgroundColor;
     data = {
         name: $('#name').val(),

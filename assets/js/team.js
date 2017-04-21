@@ -1,9 +1,10 @@
 //Inserta un equipo a la base de datos por medio del controlador team
 function insertTeam(name_tournament) {
-    console.log(name_tournament);     
+    var name = document.getElementById("name").value;
+    console.log(name_tournament+" - "+name);    
     data = {
         name_tournament: name_tournament,
-        name: $('#name').val()
+        name:name
     };
     $.ajax({
         url: 'team/insertTeam',
@@ -14,8 +15,6 @@ function insertTeam(name_tournament) {
         }
     });    
 };
-
-
 
 //Crea el torneo por medio del controlador torneo
 function createTourn() {

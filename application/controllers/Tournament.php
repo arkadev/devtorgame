@@ -14,7 +14,7 @@ class Tournament extends CI_Controller
 
     public function index()
     {
-        $name_tournament = ($_GET['name_tournament']);
+        $name_tournament = ($_GET['get_name']);        
         $this->data['tourn'] = $this->tournamentModel->getTournaments($name_tournament);
         $this->load->view('tournament', $this->data);
     }

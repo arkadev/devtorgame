@@ -17,6 +17,7 @@
                         e.preventDefault();
                         $('#popup').bPopup({
                             easing: 'easeOutBack',
+                            escClose: true,
                             speed: 450,
                             transition: 'slideDown'
                         });
@@ -25,6 +26,16 @@
                 });
             })(jQuery);
         </script>
+
+        <script>
+            $(".clickable").click(function () {
+                if ($(this).height() == 50) {
+                    $(this).height(10);
+                } else {
+                    $(this).height(50);
+                }
+            });
+        </script>        
     </head>
     <body>
         <div class="baner-login">
@@ -36,7 +47,7 @@
                     <p class="text-logo-menu-create">DevTorGame</p>
                 </div>
             </div>	
-            <div class="baner-create">
+            <div class="baner-create ">
                 <button id="show-popup" class="cart-crete">
                     <div class="margin-icon">
                         <img src="<?= base_url() . 'assets/img/add.png' ?>" class="icon-add-tournament">
@@ -51,8 +62,8 @@
                     foreach ($tournaments as $t)
                     {
                         ?>
-                        <div id="nnnnn<?= $t->name; ?>">
-                            <a href="<?= base_url() . 'index.php/team' ?>?name_tournament=<?php echo $t->name ?>">
+                        <div class="cart-crete" id="nnnnn<?= $t->name; ?>">
+                            <a href="<?= base_url() . 'team' ?>?name_tournament=<?php echo $t->name ?>">
                                 <div class="cart-crete" style="left:40%;background-color:<?= $t->color; ?>">
                                     <div>
                                         <img src="<?= base_url() . 'assets/img/lol11.jpg' ?>" class="img-responsive margin-icon" >
@@ -70,7 +81,7 @@
                 {
                     ?>
                     <tr><td></td><td></td></tr>                                                                              
-<?php } ?>
+                <?php } ?>
             </div>
             <div id="popup">
                 <div class="popup-contenedor">
@@ -83,22 +94,22 @@
                             <input id="description" class="iput-texrt-modal-name" style="top:55%;" placeholder="Descripcion"/>
                         </div>
                         <div class="div-btn-colors">
-                            <button class="btn-color" style="background-color:#E53935;" id="color-btn-1" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#029AE4;" id="color-btn-2" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#00887A;" id="color-btn-3" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#A900FF;" id="color-btn-4" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#414141;" id="color-btn-5" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#378D3B;" id="color-btn-6" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#679E37;" id="color-btn-7" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#F8A724;" id="color-btn-8" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#FF6F42;" id="color-btn-9" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#778F9B;" id="color-btn-10" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#8C6D62;" id="color-btn-11" onclick="coloBtn(this.id)"></button>
-                            <button class="btn-color" style="background-color:#7D56C1;" id="color-btn-12" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#E53935;" id="color-btn-1" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#029AE4;" id="color-btn-2" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#00887A;" id="color-btn-3" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#A900FF;" id="color-btn-4" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#414141;" id="color-btn-5" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#378D3B;" id="color-btn-6" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#679E37;" id="color-btn-7" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#F8A724;" id="color-btn-8" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#FF6F42;" id="color-btn-9" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#778F9B;" id="color-btn-10" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#8C6D62;" id="color-btn-11" onclick="coloBtn(this.id)"></button>
+                            <button type="button" class="btn-color" style="background-color:#7D56C1;" id="color-btn-12" onclick="coloBtn(this.id)"></button>
                         </div>
                         <div>                            
-                            <button type="button" class="btn-add-tournamet-validate" style="left:55%;" data-dismiss="modal">CANCELAR</button>                            
-                            <button id="insertTournament" type="buttonAdd" value="sent" class="btn-add-tournamet-validate" onclick="getValues();">CREAR</button>
+                            <a href="manager"><button type="button" class="btn-add-tournamet-validate">CANCELAR</button></a>
+                            <button type="button" class="btn-add-tournamet-validate" onclick="insertTournament()">CREAR</button>
                         </div>
                     </form>
                 </div>

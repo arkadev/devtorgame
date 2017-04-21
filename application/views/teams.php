@@ -3,65 +3,66 @@
     <head>
         <title>DevTorGame</title>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico' ?>">
+        <link href="<?= base_url() . 'assets/css/styles.css' ?>" rel="stylesheet">
+        <link href="<?= base_url() . 'assets/css/bootstrap.min.css' ?>" rel="stylesheet">
         <script src="<?= base_url() . 'assets/js/jquery.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
+        <script src="<?= base_url() . 'assets/js/jquery.bpopup.min.js' ?>"></script>
         <script src = "<?= base_url() . 'assets/js/team.js' ?>"></script>
-        <script>validateName();disabledInitTourn();keyEnterInsertTeam();</script>		
+        <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+        <script>validateName();disabledInitTourn();keyEnterInsertTeam();</script>
+        <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico' ?>">
+
+        <script>
+            ;
+            (function ($) {
+                $(function () {
+                    $('#show-popup').bind('click', function (e) {
+                        e.preventDefault();
+                        $('#popup').bPopup({
+                            easing: 'easeOutBack',
+                            speed: 450,
+                            transition: 'slideDown'
+                        });
+
+                    });
+                });
+            })(jQuery);
+        </script>
     </head>
     <body style="background-color: #2E393A" >	
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Desplegar navegación</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div>
-                    <div class="col-xs-4 col-sm-4 col-md-4">
-                        <img src="<?= base_url() . 'assets/img/Logo.png' ?>" class="img-responsive img-menu">
-                    </div>
-                    <div class="col-xs-4 col-sm-4 col-md-4">
-                        <p class="font-menu-text">DevTorGame</p>
-                    </div>
-                    <div class="col-xs-5 col-sm-4 col-md-4">
-                        <p class="font-menu-sub-text">By ArkaDev</p>
-                    </div>
+        <p style="color:#FF0000"><?php $name_tournament = ($_GET['name_tournament']); ?></p>                
+
+        <div class="baner-login">
+            <div class="baner-menu-create">
+                <div class="relative-p">
+                    <img src="<?= base_url() . 'assets/img/lol11.jpg' ?>" class="img-responsive margin-icon">
                 </div>
-            </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?= base_url() . 'index.php' ?>">Inicio</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container-fluid">
-            <div id="name_tournament">
-                <p style="color:#FF0000";><?php $name_tournament = ($_GET['name_tournament']);
-echo "$name_tournament";
-?></p>
-            </div>		
-            <div class="row">
-                <div class="col-xs-8 col-sm-8 col-md-3">
-                    <input type="text" id="name" class="form-control" placeholder="Nombre de equipo" >
+                <div class="relative-p">
+                    <p class="text-menu-team"><?= $name_tournament ?></p>
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-3 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 btn-add-margin">
-                    <button id="insertTeam" type="buttonAdd" value="sent" disabled="true" onclick="insertTeam('<?php $name_tournament = ($_GET['name_tournament']);
-                    echo "$name_tournament";
-?>')" class="btn btn-success btn-circle btn-lg ">
-                        <span class="glyphicon glyphicon-check"></span>
+                <div class="relative-p">
+                    <p class="text-menu-team-d"></p>
+                </div>
+                <div class="div-menu-team">
+                    <button class="btn-menu-team" id="show-popup">
+                        <img src="<?= base_url() . 'assets/img/addT.png' ?>" class="img-btn-menu">
+                        <p class="text-btn-menu-team">Agregar Equipo</p>
+                    </button>
+                    <a href="<?= base_url() . 'tournament' ?>?get_name=<?= $name_tournament ?>">
+                        <button class="btn-menu-team">
+                            <img src="<?= base_url() . 'assets/img/tour.png' ?>" class="img-btn-menu">
+                            <p class="text-btn-menu-team">Iniciar Torneo</p>
+                        </button>
+                    </a>
+                    <button class="btn-menu-team">
+                        <img src="<?= base_url() . 'assets/img/exit.png' ?>" class="img-btn-menu">
+                        <p class="text-btn-menu-team">Regresar</p>
                     </button>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 btn-run">				
-                    <button type="buttonAdd" id="initTourn" disabled="true" onclick="isImpar()"  class="btn btn-primary btn-run btn-lg">Iniciar Torneo</button>				
-                </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 margin-table">
-                    <table id="tableTeams" class="table table-hover font-table-add">
+            <div class="div-table">
+                <div class="div-t">
+                    <table class="table table-hover">
                         <tbody>
                             <tr>
                                 <th>#</th>
@@ -70,12 +71,12 @@ echo "$name_tournament";
                             <?php
                             if (is_array($teams) || is_object($teams))
                             {
-                                foreach ($teams as $t)
+                                for ($i = 0; $i < count($teams); $i++)
                                 {
                                     ?>
                                     <tr>
-                                        <td><?= $t->id_team; ?></td>
-                                        <td><?= $t->name; ?></td>
+                                        <td><?= $i + 1; ?></td>
+                                        <td><?= $teams[$i]->name; ?></td>
                                     </tr>
                                     <?php
                                 }
@@ -88,31 +89,27 @@ echo "$name_tournament";
                     </table>
                 </div>
             </div>
-        </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Mensaje de Confirmación</h4>
-                    </div>
-                    <div class="modal-body">
-                        La cantidad de equipos es impar, esto significa que uno de los equipos va a quedar sin contrincante<br><br>
-                        ¿Esta seguro que desea continuar?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <a href="<?= base_url() . 'index.php/tournament' ?>?name_tournament=<?php $name_tournament = ($_GET['name_tournament']);
-echo "$name_tournament";
-?>">						
-                            <button type="buttonAdd" class="btn btn-primary">Continuar</button>
-                        </a>
-                    </div>
+            <div class="baner-warning">
+                <div class="relative-p">
+                    <img src="<?= base_url() . 'assets/img/campeon4.png' ?>" class="logo-menu-create" style="margin-top: 60%;">
+                </div>
+                <div class="relative-p">
+                    <p class="text-warning">¡Recuerda que para crear un torneo debes registrar minimo dos equipos!</p>
                 </div>
             </div>
-        </div>
-
+            <div id="popup">
+                <div class="popup-contenedor-2">
+                    <form>
+                        <div class="div-modal-name">
+                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de equipo"/>
+                        </div>
+                        <div>                             
+                            <button type="button" onclick="insertTeam('<?= $name_tournament = ($_GET['name_tournament']); ?>')">CREAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>                        
     </body>
 </html>

@@ -8,41 +8,63 @@ body {
 }
 *:focus { outline: none; } 
 *::-webkit-input-placeholder {
-	font-size: 16px;
-	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
     color: white;
 }
 *:-moz-placeholder {
-	font-size: 16px;
-	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
     color: white;
 }
 *::-moz-placeholder {
-	font-size: 16px;
-	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
     color: white;
 }
 *:-ms-input-placeholder {
-	font-size: 16px;
-	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
     color: white;
 }
 .div-btn-colors{
-	position: relative;
-	text-align: center;
+    position: relative;
+    text-align: center;
 }
 .btn-color{
-	position: relative;
-	width: 30px;
-	height: 30px;
-	border-radius: 15px;
-	border: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
 }
 .logo-menu-create{
 	position: relative;
 	top: 20%;	
 	width: 200px;
 	height: 200px;
+}
+.div-modal-name{
+    position: relative;
+    top: -13px;
+    left: 0;
+    width: 100%;
+    height: 8em;
+    background-color: #029AE4;
+}
+.img-create{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.div-menu-team{
+	position: relative;
+	margin-top: 30%;
+	left: 0;
+	width: 100%;
+	height: 25%;
 }
 .div-modal-name{
 	position: relative;
@@ -52,40 +74,40 @@ body {
 	height: 8em;
 	background-color: #029AE4;
 }
-.img-create{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-}
 #popup {
-	position: relative;
-	top: 50%;
-	left: 70%;
-	display: none;
+    position: relative;
+    top: 50%;
+    left: 70%;
+    display: none;
 }
-
-.popup-contenedor {
+.popup-contenedor-2 {
 	position: relative;
 	background-color: #fafafa;
 	color:#333;
 	border-radius: 3px;
-	width: 60%;
-	height: 80%;
+	width: 450px;
+	height: 180px;
+}
+.popup-contenedor {
+    position: relative;
+    background-color: #fafafa;
+    color:#333;
+    border-radius: 3px;
+    width: 60%;
+    height: 80%;
 }
 .btn-add-tournamet-validate{
-	border: none;
-	background-color: transparent !important;
-	font-size: 14px;
-	font-family: "Arial";
-	font-weight: 500;
-	color: black;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-left: 10px;
-	top: 85%;
-	position: relative;
+    border: none;
+    background-color: transparent !important;
+    font-size: 14px;
+    font-family: "Arial";
+    font-weight: 500;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    top: 85%;
+    position: relative;
 }
 .btn-circle {
     width: 50px;
@@ -96,16 +118,16 @@ body {
     border-radius: 25px;
 }
 .iput-texrt-modal-name{
-	position: relative;
-	background-color: transparent;
-	left: 10%;
-	top: 30%;
-	width: 80%;
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-radius: none;
-	color: white;
+    position: relative;
+    background-color: transparent;
+    left: 10%;
+    top: 30%;
+    width: 80%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: none;
+    color: white;
 }
 .modal:before {
     content: "";
@@ -436,73 +458,142 @@ body {
 }
 
 .baner-login{
-    position: absolute;
+    position: fixed;
+    overflow: scroll;
     margin: 0;
     background-color: #E9E9E9;
     width: 100%;
     height: 100%;
 }
-.baner-create{
+
+.baner-create{        
+    margin-right:5%;
+    margin-bottom:5%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+.cart-crete{    
+    display: inline-block;    
+    margin-right:20px;
+    margin-bottom:20px;
+    width: 250px;
+    height: 270px;
+    background-color: white;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.12);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.12);
+}
+.icon-add-tournament{
+    position: relative;
+    top: 70%;
+    width: 3em;
+    height: 3em;
+}
+.margin-icon{
+    position: relative;    
+    width: 100%;
+    height: -10%;
+    text-align: center;
+}
+.text-cart-create{
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.text-menu-team-d{
+	font-size: 18px;
+	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+	color: white;
+}
+.div-t{
+	position: relative;
+	top: 10%;
+	left: 35%;
+	width: 30%;
+	height: 100%;
+}
+.baner-warning{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	height: 100%;
+}
+.text-menu-team{
+	font-size: 22px;
+	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+	color: white;
+	margin-top: 5%;
+}
+.div-table{
 	position: absolute;
 	top: 0;
 	left: 20%;
-	width: 80%;
-	height: 100%;
+	width: 60%;
+	height: 80%;
 }
-.cart-crete{
+.img-btn-menu{
 	position: absolute;
-	top: 10%;
 	left: 10%;
-	width: 250px;
-	height: 270px;
-	border: none;
-	background-color: white;
-	cursor: pointer;
-	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.12);
-	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.12);
-	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.12);
+	top: 34%;
+	width: 25px;
+	height: 25px;
 }
-.icon-add-tournament{
-	position: relative;
-	top: 70%;
-	width: 3em;
-	height: 3em;
+.text-btn-menu-team{
+	position: absolute;
+	right: 10%;
+	top: 30%;
+	font-size: 16px;
+	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+	color: white;
+
 }
-.margin-icon{
+.btn-menu-team{
 	position: relative;
-	top:0;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: 40%;
+	height: 33.33%;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 	text-align: center;
 }
-.text-cart-create{
-	position: relative;
-	top: 0;
-	left: 0;
-	font-size: 22px;
-	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
-}
+
 .text-logo-menu-create{
-	position: relative;
-	color: white;
-	top: 0;
-	left: 0;
-	font-size: 36px;
+    position: relative;
+    color: white;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.text-warning{
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 16px;
 	font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+	color: black;
+}
+.relative-p{
+	position: relative;
+	text-align: center;
 }
 .div-menu-logo{
-	position: relative;
-	height: 40%;
-	text-align: center;
+    position: relative;
+    height: 40%;
+    text-align: center;
 }
 .baner-menu-create{
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 20%;
-	background-color: #222629;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #222629;
 }
 .menu-mob{
     position: absolute;
@@ -549,7 +640,7 @@ body {
     resize:none;
     font-size: 20px;
     font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
-    width: 600px;
+    width: 400px;
     text-align: justify;
 }
 
@@ -561,7 +652,7 @@ body {
 .text-baner-2-title{
     position: absolute;
     top: 30%;
-    left: 10%;
+    left: 20%;
 }
 .img-campeon{
     position: absolute;    

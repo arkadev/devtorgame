@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML> 
+<!DOCTYPE HTML> 
 <html lang="es">
     <head>
         <title>DevTorGame</title>
@@ -30,9 +30,9 @@
             <nav class="menu">
                 <ul class="ul-index active">
                     <li class="li-index current-item"><a href="#" class="a1">INICIO</a></li>
-                    <li class="li-index current-item"><a href="#" class="a1">SERVICOS</a></li>
-                    <li class="li-index current-item"><a href="#" class="a1">CLIENTES</a></li>
-                    <li class="li-index current-item"><a href="#" class="a1">CONTACTOS</a></li>
+                    <li class="li-index current-item"><a href="#servicios" class="a1">SERVICIOS</a></li>
+                    <li class="li-index current-item"><a href="#clientes" class="a1">CLIENTES</a></li>
+                    <li class="li-index current-item"><a href="#contactos" class="a1">CONTACTOS</a></li>
                     <li class="li-index current-item"><a href="#" class="a1">INICIAR SESIÓN</a></li>
                     <li class="li-index current-item"><a href="#" class="a1">REGISTRARSE</a></li>
                 </ul>
@@ -47,25 +47,29 @@
                 </a>				
             </div>
         </div>
+        <a name="servicios"></a>
         <div class="baner-services baner-services-1">
             <img src="<?= base_url() . 'assets/img/campeon1.png' ?>" class="img-campeon">
             <div class="text-baner-1-title">
                 <p class="text-baner-title ">SERVICIOS</p>
-                <textarea cols="15" rows="5" class="textarea-init">Somos una empresa dedicada al desarrollo de software, aplicaciones web, Stand Alone y móviles, además diseñamos y gestionamos la configuración de red.</textarea>
+                <textarea cols="10" rows="30" class="textarea-init" readonly>¿Te gustan los videojuegos MOBA? O acaso ¿Eres fanático de League Of Legends?, pues te damos la bienvenida a esta, tu página web. Aquí encontrarás la posibilidad de crear y personalizar tus torneos de una forma sencilla. Te ofrecemos la oportunidad de almacenar de manera simultánea cada uno de los campeonatos que has personalizado. Quédate, explora y disfruta de este espacio dedicado para ti.</textarea>
             </div>
         </div>
+        <a name="clientes"></a>
         <div class="baner-services baner-services-2">
             <img src="<?= base_url() . 'assets/img/campeon2.png' ?>" class="img-campeon2">
             <div class="text-baner-2-title">
                 <p class="text-baner-title">CLIENTES</p>
-                <textarea cols="15" rows="5" class="textarea-init">Nuestros clientes son personas que dedican su tiempo y esfuerzo a la organización de torneos de videojuegos especialmente de League Of Legends, perteneciente a la compañia Riot Games.</textarea>
+                <textarea cols="15" rows="20" class="textarea-init" readonly>Nuestros clientes son personas como tú, que dedican su tiempo y esfuerzo a la organización de torneos online de videojuegos, especialmente de League Of Legends, perteneciente a la compañia Riot Games. 
+Si tu pasatiempo favorito es superar tu nivel de juego, también has llegado al lugar indicado, pues cada producto creado por nuestro equipo de trabajo, se enfoca en tus necesidades, gustos y destrezas.</textarea>
             </div>
         </div>
+        <a name="contactos"></a>
         <div class="baner-services baner-services-3">
             <img src="<?= base_url() . 'assets/img/campeon3.png' ?>" class="img-campeon">
             <div class="text-baner-1-title">
                 <p class="text-baner-title">CONTACTOS</p>
-                <textarea rows="5" class="textarea-init">El grupo de trabajo esta conformado por tres Ingenieros de Sistemas y Computación con mas de cuatro años de experiencia en desarrollo de software y diseño de redes.</textarea>
+                <textarea rows="25" class="textarea-init" readonly>Somos Arkadev, puedes contactarnos a través de las redes sociales en Facebook como @arkadev.sas.1 y en Twitter como @ArkaDevGroup</textarea>
             </div>
         </div>
         <div class="baner-contact"></div>

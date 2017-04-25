@@ -207,6 +207,20 @@ body {
     top: 25%;
     left: 24%;
 }
+.div-tournamet-table{
+    position: absolute;
+	top: 0;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+}
+.div-t-t{
+    position: relative;
+	top: 10%;
+	left: 20%;
+	width: 60%;
+	height: 90%;
+}
 .div-tournaments-create{
     position: absolute;
     top: 0;
@@ -638,9 +652,9 @@ body {
     background-color: transparent;
     border: none;
     resize:none;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
-    width: 400px;
+    width: 500px;
     text-align: justify;
 }
 
@@ -652,7 +666,7 @@ body {
 .text-baner-2-title{
     position: absolute;
     top: 30%;
-    left: 20%;
+    left: 10%;
 }
 .img-campeon{
     position: absolute;    
@@ -775,8 +789,8 @@ body {
 .menu {
     position: absolute;
     top: 12%;
-    left: 40%;
-    width: 60%;
+    left: 35%;
+    width: 65%;
 }
 
 .font-text-logo{
@@ -900,4 +914,3 @@ body {
         display: none;
     }
 }
-

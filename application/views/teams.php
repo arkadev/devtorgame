@@ -54,10 +54,12 @@
                             <p class="text-btn-menu-team">Iniciar Torneo</p>
                         </button>
                     </a>
+                    <a href="<?= base_url() . 'manager'?>">
                     <button class="btn-menu-team">
                         <img src="<?= base_url() . 'assets/img/exit.png' ?>" class="img-btn-menu">
                         <p class="text-btn-menu-team">Regresar</p>
                     </button>
+                    </a>
                 </div>
             </div>
             <div class="div-table">

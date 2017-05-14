@@ -14,7 +14,7 @@ script:
 
 after_success:
   - git clone https://github.com/arkadev/devtorgame.git
-  - cd ci-buddy
+  - cd devtorgame
   - git config --global user.email "arkadevgroup@gmail.com"
   - git config --global user.name "arkadev"
   - git checkout master

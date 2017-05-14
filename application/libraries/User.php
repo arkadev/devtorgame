@@ -1,7 +1,8 @@
 <?php
 
-namespace devtorgame\application\libraries;
-
+/**
+ * @author jhonvegamas@gmail.com
+ */
 class User
 {
 
@@ -23,6 +24,5 @@ class User
     {
         return $this->name;
     }
-
 
 }

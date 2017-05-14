@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_name` varchar(12) NOT NULL,
   `password` varchar(32) NOT NULL,
   PRIMARY KEY (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
 
 CREATE TABLE IF NOT EXISTS `tournament` (
   `id_tournament` int(11) NOT NULL AUTO_INCREMENT,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `tournament` (
   `color` varchar(8) NOT NULL,
   PRIMARY KEY (`id_tournament`,`user_email`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
 
 CREATE TABLE IF NOT EXISTS `team` (
   `id_team` int(11) NOT NULL AUTO_INCREMENT,
@@ -22,14 +22,14 @@ CREATE TABLE IF NOT EXISTS `team` (
   `name` varchar(25) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id_team`,`id_tournament`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+)
 
 CREATE TABLE IF NOT EXISTS `phase` (
   `id_phase` int(11) NOT NULL AUTO_INCREMENT,
   `id_tournament` int(11) NOT NULL,
   `name` varchar(21) NOT NULL,
   PRIMARY KEY (`id_phase`,`id_tournament`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
 
 CREATE TABLE IF NOT EXISTS `match` (
   `id_match` int(11) NOT NULL,
@@ -40,4 +40,4 @@ CREATE TABLE IF NOT EXISTS `match` (
   `team_id_b` int(11) NOT NULL,
   `score_b` int(2) NOT NULL,
   PRIMARY KEY (`id_match`, 'id_tournament')
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)

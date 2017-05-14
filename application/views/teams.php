@@ -104,7 +104,7 @@
                 <div class="popup-contenedor-2">
                     <form>
                         <div class="div-modal-name">
-                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de equipo"/>
+                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de equipo" required="required"/>
                         </div>
                         <div>                             
                             <button type="button" onclick="insertTeam('<?= $name_tournament = ($_GET['name_tournament']); ?>')">CREAR</button>

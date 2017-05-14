@@ -27,7 +27,7 @@
                 <div class="div-menu-team">
                     <button class="btn-menu-team">
                         <img src="<?= base_url() . 'assets/img/tour.png'?>" class="img-btn-menu">
-                        <p class="text-btn-menu-team">Crear Torneo</p>
+                        <p class="text-btn-menu-team">Regresar</p>
                     </button>
                 </div>
             </div>

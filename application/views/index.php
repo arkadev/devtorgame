@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML> 
+﻿<!DOCTYPE HTML>
 <html lang="es">
     <head>
         <title>DevTorGame</title>
@@ -21,7 +21,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <meta url="https://www.facebook.com/arkadev.sas.1?fref=ts">
-        <meta url="https://twitter.com/ArkaDevGroup">        
+        <meta url="https://twitter.com/ArkaDevGroup">
         <link rel="shortcut icon" href="<?= base_url() . 'favicon.ico' ?>" />
     </head>
     <body>
@@ -57,9 +57,9 @@
                         </li>
                     <?php } ?>
                     <li class="li-index current-item"><a href="<?php base_url() ?>" class="a1">Inicio</a></li>
-                    <li class="li-index current-item"><a href="#" class="a1">Servicios</a></li>                    
+                    <li class="li-index current-item"><a href="#" class="a1">Servicios</a></li>
                     <li class="li-index current-item"><a href="#" class="a1">Clientes</a></li>
-                    <li class="li-index current-item"><a href="#" class="a1">Contactos</a></li>                                        
+                    <li class="li-index current-item"><a href="#" class="a1">Contactos</a></li>
                 </ul>
             </nav>
             <div class="div-text-init">
@@ -69,7 +69,7 @@
             <div>
                 <a href="<?= base_url() . 'manager' ?>">
                     <button class="btn-init" type="button">COMENZAR</button>
-                </a>				
+                </a>
             </div>
         </div>
         <div class="baner-services baner-services-1">

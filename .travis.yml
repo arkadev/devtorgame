@@ -1,0 +1,31 @@
+branches:
+  only:    
+    - develop
+language: php
+
+php:
+    - '5.6'
+    
+before_script: 
+    - 'composer install'
+    
+script: 
+    - './vendor/bin/phpunit tests'
+    
+after_success: 
+  - git clone https://github.com/arkadev/devtorgame.git
+  - cd ci-buddy
+  - git config --global user.email "jhonvegamas@gmail.com"
+  - git config --global user.name "jhonvegamas"
+  - git checkout master
+  - git merge origin/develop -m "Integraci�n desde Travis CI"
+  - git remote set-url origin https://$USER:$PASS@github.com/jhonvegamas/ci-buddy.git
+  - git push origin master 
+  
+notifications:
+
+  email:
+    recipients:
+    - jhonvegamas@hotmail.com    
+    on_success: never # default: change
+    on_failure: always # default: always

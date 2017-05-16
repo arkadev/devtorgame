@@ -313,6 +313,39 @@
 .bnn-equipo{
     top: 335%;
 }
+.bnn-contact{
+    top: 415%;
+}
+
+.icon-contact-pos{
+    position: relative;
+    top: 20px;
+}
+.baner-contact{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 495%;
+    background-color: #212121;
+}
+.contact-post{
+    position: relative;
+    margin-top: 70px;
+}
+.bigicon {
+    font-size: 30px;
+    color: #36A0FF;
+    left: 50%;
+
+}
+.text-contact{
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 10%;
+    font-family: 'museo-sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+    text-align: justify;
+}
 .div-info{
     position: relative;
     width:160px;
@@ -326,6 +359,10 @@
     -webkit-box-shadow: -1px 5px 22px rgba(50, 50, 50, 0.34);
     -moz-box-shadow: -1px 5px 22px rgba(50, 50, 50, 0.34);
     box-shadow: -1px 5px 22px rgba(50, 50, 50, 0.34);
+}
+
+.img-jhon{
+    position: relative;
 }
 
 .pos-div-cols{
@@ -372,6 +409,57 @@
     width: 100%;
     height: 100%;
     text-align: justify;
+}
+
+.icons-contac{
+    display: block;
+    background-color: #222;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    outline: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.icons-contac:hover{
+    background-color: #E16D26;
+    color: white;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+.text-icon-contac{
+    color: white;
+    text-decoration: none;
+}
+.text-icon-contac:hover{
+    color: #E16D26;
+    text-decoration: none;
+}
+
+.div-imgs{
+    position: absolute;
+    width:20%;
+    top: 50%;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 3px double #c2bcc2;
+    -webkit-box-shadow: -1px 5px 22px rgba(50, 50, 50, 0.34);
+    -moz-box-shadow: -1px 5px 22px rgba(50, 50, 50, 0.34);
+    box-shadow: -1px 5px 22px rgba(50, 50, 50, 0.34);
+}
+.div-img-service{
+    margin-left: 60%;
+}
+.div-img-client{
+    margin-left: 15%;
+
 }
 /*Termina vista de index.php*/
 
@@ -507,7 +595,12 @@
 .input-container .bar:after {
     right: 50%;
 }
-
+.img-login-logo{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 40%;
+}
 /*Termina vista de signIn.php*/
 
 
@@ -1069,11 +1162,7 @@
     left: 50%;
 }
 
-.baner-contact{
-    padding: 1%;
-    position: relative;	
-    background-color: black;
-}
+
 
 .toggle-nav {
     display:none;

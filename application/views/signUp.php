@@ -23,6 +23,9 @@
                 <div class="card-login">
                     <form class="form">
                         <div class="header header-primary text-center">
+                            <a href="<?= base_url() . '' ?>">
+                            <img src="<?= base_url() . 'assets/img/logoD.png' ?>" class="img-responsive img-login-logo">
+                            </a>
                             <h4>DevTorGame</h4>
                         </div>
                         <div class="input-container">

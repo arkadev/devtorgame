@@ -36,11 +36,6 @@ function insertTournament() {
     var name = document.getElementById("name").value;
     var description = document.getElementById("description").value;
     var image_url = document.getElementById("image-baner").src;
-//    while (onclick=="insertTournament()") {
-//        if (name != null) {
-//            alert("Es nulo");
-//        }
-//    }
     data = {
         name: name,
         description: description,

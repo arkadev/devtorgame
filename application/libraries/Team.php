@@ -12,9 +12,25 @@ class Team
      */
     private $name;
 
-    function __construct($name = '')
+    /**
+     * Id del torneo al que esta asociado el equipo
+     * @var type string
+     */
+    private $id_tournament;
+
+    function __construct($name, $id_tournament)
     {
         $this->name = $name;
+        $this->id_tournament = $id_tournament;
+    }
+
+    /**
+     * Trae el id del torneo al que esta asociado el equipo
+     * @return type string
+     */
+    public function getId_tournament()
+    {
+        return $this->id_tournament;
     }
 
     /**

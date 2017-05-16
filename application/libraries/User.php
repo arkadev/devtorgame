@@ -6,20 +6,41 @@
 class User
 {
 
-    private $id;
+    /**
+     * Nombre del usuario
+     * @var type string
+     */
     private $name;
+    /**
+     * Contraseña del usuario
+     * @var type string
+     */
+    private $password;
 
-    function __construct()
+    /**
+     * Clase Usuario
+     * @param type $name
+     * @param type $password
+     */
+    function __construct($name, $password)
     {
-        $this->id = '1';
-        $this->name = 'Jhon';
+        $this->name = $name;
+        $this->password = $password;
     }
 
-    function getId()
+    /**
+     * Trae la contraseña del usuario
+     * @return type string
+     */
+    function getPassword()
     {
-        return $this->id;
+        return $this->password;
     }
 
+    /**
+     * Trae el nombre del usuario
+     * @return type string
+     */
     function getName()
     {
         return $this->name;

@@ -4,9 +4,9 @@ $active_group = 'default'; $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'torneo',
+	'username' => 'id1671105_root',
+	'password' => 'pandalien987',
+	'database' => 'id1671105_torneo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

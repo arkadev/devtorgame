@@ -1,19 +1,16 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+class Welcome extends CI_Controller {
 
-class Welcome extends CI_Controller
-{
-
-    public function __construct()
-    {
+	public function __construct() {
         parent::__construct();
-        $this->load->helper(array('form', 'url'));
+        $this->load->helper(array('form', 'url'));        
     }
-
-    public function index()
-    {
-        $this->load->view('index');
-    }
-
+	
+	public function index(){
+		$this->load->view('index');
+	}
 }
+
+/* End of file welcome.php */
+/* Location: ./application/controllers/welcome.php */

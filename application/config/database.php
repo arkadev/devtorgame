@@ -2,11 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default'; $query_builder = TRUE;
 $db['default'] = array(
-	'dsn'	=> 'https://devtorgame.000webhostapp.com/',
+	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'id953720_torneo',
-	'password' => 'pandalien987',
-	'database' => 'id953720_torneo',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'torneo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

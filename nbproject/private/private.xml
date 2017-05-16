@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/devtorgame/application/controllers/SignUp.php</file>
             <file>file:/C:/xampp/htdocs/devtorgame/assets/css/styles.css</file>
+            <file>file:/C:/xampp/htdocs/devtorgame/application/views/signUp.php</file>
+            <file>file:/C:/xampp/htdocs/devtorgame/assets/js/team.js</file>
+            <file>file:/C:/xampp/htdocs/devtorgame/assets/js/signUp.js</file>
+            <file>file:/C:/xampp/htdocs/devtorgame/application/views/teams.php</file>
         </group>
     </open-files>
 </project-private>

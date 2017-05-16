@@ -46,7 +46,7 @@
                 <div class="banner-text">
                     <div class="div-text-init">
                         <p class="text-tournament">DevTorGame</p>
-                        <p class="text-sub-tournament">Crea y administra tus propios torneos</p>
+                        <p class="text-sub-tournament">Errorrrrrr</p>
                     </div>
                     <a href="<?= base_url() . 'signUp' ?>">
                         <button class="btn-init" type="button">REGISTRARSE <span class="glyphicon glyphicon-open"></span> </button>

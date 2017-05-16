@@ -29,7 +29,7 @@ class Login extends CI_Controller
                     'login' => true
                 );
                 $this->session->set_userdata($data);
-                echo "El usuario " . $this->session->userdata('email') . " se a logueado";
+                echo "El usuario " . $this->session->userdata('email') . " se ha logueado";
             } else {
                 header("Location: " . base_url());
             }

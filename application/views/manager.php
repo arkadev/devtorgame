@@ -89,10 +89,8 @@
                         <img id="image-baner" src="<?= base_url() . 'assets/img/lol11.jpg' ?>" class="img-create">
                     </div>
                     <form>
-                      
                         <div  id="baner-color" class="div-modal-name" style="background-color:#029AE4">
-                            <label for="#{label}"></label>
-                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de torneo" maxlength="15"/>
+                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de torneo"/>
                             <input id="description" class="iput-texrt-modal-name" style="top:55%;" placeholder="Descripcion"/>
                         </div>
                         <div class="div-btn-colors">

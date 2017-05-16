@@ -24,4 +24,27 @@ class LoginModel extends CI_Model
         $this->db->insert('user', $data);
     }
 
+    public function ingresar($usser, $passw)
+    {
+        $this->db->select('id');
+        $this->db->from('user');
+        $this->db->where('email', $usser);
+        $this->db->where('password', $passw);
+
+        $result = $this->db->get();
+
+        if ($result->num_rows() == 1) {
+            $r = $result->row();
+
+            $session_user = array(
+                's_id' => $r->id,
+                'login' => true
+            );
+
+            $this->session->set_userdata($session_user);
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

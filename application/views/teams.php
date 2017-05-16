@@ -54,12 +54,10 @@
                             <p class="text-btn-menu-team">Iniciar Torneo</p>
                         </button>
                     </a>
-                    <a href="<?= base_url() . 'manager'?>">
                     <button class="btn-menu-team">
                         <img src="<?= base_url() . 'assets/img/exit.png' ?>" class="img-btn-menu">
                         <p class="text-btn-menu-team">Regresar</p>
                     </button>
-                    </a>
                 </div>
             </div>
             <div class="div-table">
@@ -104,7 +102,7 @@
                 <div class="popup-contenedor-2">
                     <form>
                         <div class="div-modal-name">
-                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de equipo" maxlength="15"/>
+                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de equipo"/>
                         </div>
                         <div>                             
                             <button type="button" onclick="insertTeam('<?= $name_tournament = ($_GET['name_tournament']); ?>')">CREAR</button>

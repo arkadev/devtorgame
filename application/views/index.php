@@ -102,7 +102,7 @@
         </div>
         <div class="banner-informations bnn-services bnn-colors">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-info">
-                <h2>SERICIOS</h2>
+                <h2>SERVICIOS</h2>
                 <div>
                     <img src="<?= base_url() . 'assets/img/service.png' ?>" class="img-responsive div-imgs div-img-service">
                 </div>

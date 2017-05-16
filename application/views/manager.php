@@ -92,7 +92,7 @@
                       
                         <div  id="baner-color" class="div-modal-name" style="background-color:#029AE4">
                             <label for="#{label}"></label>
-                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de torneo" required="required"/>
+                            <input id="name" class="iput-texrt-modal-name" placeholder="Nombre de torneo" maxlength="15"/>
                             <input id="description" class="iput-texrt-modal-name" style="top:55%;" placeholder="Descripcion"/>
                         </div>
                         <div class="div-btn-colors">

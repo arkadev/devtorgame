@@ -36,25 +36,29 @@ function insertTournament() {
     var name = document.getElementById("name").value;
     var description = document.getElementById("description").value;
     var image_url = document.getElementById("image-baner").src;
-//    while (onclick=="insertTournament()") {
-//        if (name != null) {
-//            alert("Es nulo");
-//        }
-//    }
-    data = {
-        name: name,
-        description: description,
-        image_url: image_url,
-        color: hexc(color)
-    };
-    $.ajax({
-        url: 'manager/insertTournament',
-        data: data,
-        type: 'post',
-        success: function () {
-            location.reload();
-        }
-    });
+    if ($("#name").val().trim().length > 1 && $("#name").val().trim().length <= 15) {
+        data = {
+            name: name,
+            description: description,
+            image_url: image_url,
+            color: hexc(color)
+        };
+        $.ajax({
+            url: 'manager/insertTournament',
+            data: data,
+            type: 'post',
+            success: function () {
+                location.reload();
+            }
+        });
+    } else if ($("#name").val().trim().length === 1) {
+        alert("El nombre del torneo debe ser mayor a una letra");
+    } else if ($("#name").val().trim().length > 15) {
+        alert("El nombre del torneo debe ser menor a quince letras");
+    } else {
+        alert("Debe asignarle un nombre al torneo");
+    }
+    ;
 }
 ;
 

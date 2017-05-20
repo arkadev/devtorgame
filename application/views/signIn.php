@@ -26,7 +26,7 @@ and open the template in the editor.
         <div class="banner-fondo-s">
             <div class="col-xs-6 col-sm-6 col-md-3  col-lg-3 col-xs-offset-4  col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
                 <div class="card-login">
-                    <form class="form">
+                    <form class="form" action="<?php echo base_url();?>signIn/ingresar" method="post">
                         <div class="header header-primary text-center">
                             <a href="<?= base_url() . '' ?>">
                                 <img src="<?= base_url() . 'assets/img/logoD.png' ?>" class="img-responsive img-login-logo">
@@ -34,21 +34,21 @@ and open the template in the editor.
                             <h4>DevTorGame</h4>
                         </div>
                         <div class="input-container">
-                            <input type="text"  required="required"/>
+                            <input name="user" type="text"  required="required"/>
                             <label for="#{label}" >
                                 <span class="glyphicon glyphicon-user"></span>
                                 Usuario</label>
                             <div class="bar"></div>
                         </div>
                         <div class="input-container">
-                            <input type="password"  required="required"/>
+                            <input name="pass" type="password"  required="required"/>
                             <label for="#{label}">
                                 <span class="glyphicon glyphicon-lock"></span>
                                 Contraseña</label>
                             <div class="bar"></div>
                         </div>
                         <div class="col-xs-8 col-sm-7 col-md-8  col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-32 col-lg-offset-2">
-                            <button class="btn-login">INICIAR SESIÓIN</button>
+                            <button class="btn-login">INICIAR SESIÓN</button>
                         </div>
                         <div class="col-xs-8 col-sm-7 col-md-8  col-lg-8 col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
                             <a href="#" class="text-center colo-text-login">¿Olvidaste tu contraseña?</a>

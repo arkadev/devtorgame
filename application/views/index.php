@@ -1,4 +1,4 @@
-<!DOCTYPE HTML> 
+<!DOCTYPE HTML>
 <html lang="es">
     <head>
         <title>DevTorGame</title>
@@ -21,7 +21,6 @@
                 <nav class="menu">
                     <img src="<?= base_url() . 'assets/img/logoD.png' ?>" class="img-logo-init">
                     <ul class="col-md-6 col-lg-6 col-md-offset-4 col-lg-offset-3 ul-index">
-                        <li class="li-index"><a href="#inicio" class="a1 ">INICIO</a></li>
                         <li class="li-index"><a href="#inicio" class="a1 ">INFORMACIÓN</a></li>
                         <li class="li-index"><a href="#servicios" class="a1">SERVICIOS</a></li>
                         <li class="li-index"><a href="#clientes" class="a1">CLIENTES</a></li>
@@ -29,10 +28,19 @@
                         <li class="li-index"><a href="#contactos" class="a1">CONTACTOS</a></li>
 
                     </ul>
-                    <ul class="col-md-2 col-lg-2 ul-index">
-                        <li class="li-index"><a href="<?= base_url() . 'signIn' ?>"  class="a1">
+                    <ul class="col-md-2 col-lg-3 ul-index">
+                        <?php if ($this->session->userdata('login')) { ?>
+                          <li class="li-index"><a href="<?= base_url() . 'manager' ?>" class="a1 ">MIS TORNEOS</a></li>
+                        <li class="li-index"><a href="<?= base_url() . 'signIn/logout' ?>"  class="a1">
                                 <span class="glyphicon glyphicon-user"></span>
-                                LOGIN</a></li>
+                                Cerrar Sesión</a></li>
+
+                                <?php } else { ?>
+                                <li class="li-index"><a href="<?= base_url() . 'signIn' ?>"  class="a1">
+                                <span class="glyphicon glyphicon-user"></span>
+                                Ingresar</a></li>
+
+                                 <?php } ?>
                     </ul>
                 </nav>
                 <div class="banner-text">
@@ -69,7 +77,7 @@
                     <span class="glyphicon glyphicon-tower icons-info"></span>
                     <p class="text-icon-info">Torneos</p>
                 </div>
-                <div class="position-text-info"> 
+                <div class="position-text-info">
                     <h4>Si quieres una forma sencilla de poder crear, personalizar y administrat tus porpios torneos te ofrecemos la manera mas eficaz utlizando DevTorGame.</h4>
                 </div>
             </div>
@@ -78,7 +86,7 @@
                     <span class="glyphicon glyphicon-user icons-info"></span>
                     <p class="text-icon-info">Usuarios</p>
                 </div>
-                <div class="position-text-info"> 
+                <div class="position-text-info">
                     <h4>Eres una persona apasionada a los video-juegos y quieres organizar un torneo en tu sector este es el espaio perfecto para ti.</h4>
                 </div>
             </div>
@@ -87,14 +95,14 @@
                     <span class="glyphicon glyphicon-briefcase icons-info"></span>
                     <p class="text-icon-info">Nosotros</p>
                 </div>
-                <div class="position-text-info"> 
+                <div class="position-text-info">
                     <h4>Nuestro equipo esta disponble en ayudar a mejorar y hacer mas sencilla tu experiencia como creador de torneos.</h4>
                 </div>
             </div>
         </div>
         <div class="banner-informations bnn-services bnn-colors">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 title-info">
-                <h2>SERICIOS</h2>
+                <h2>SERVICIOS</h2>
                 <div>
                     <img src="<?= base_url() . 'assets/img/service.png' ?>" class="img-responsive div-imgs div-img-service">
                 </div>
@@ -126,7 +134,7 @@
                     <div>
                         <img src="<?= base_url() . 'assets/img/jhon.png' ?>" class="img-responsive div-info">
                     </div>
-                    <div class="position-text-info"> 
+                    <div class="position-text-info">
                         <h4>Jhon Vega, Desarrollador
                             <br>jhon.vega@uptc.edu.co
                             <br>Celular: 321 384 50 83</h4>
@@ -136,9 +144,9 @@
                     <div>
                         <img src="<?= base_url() . 'assets/img/camilo.png' ?>" class="img-responsive div-info">
                     </div>
-                    <div class="position-text-info"> 
-                        <h4>Camilo Bayona, Desarrollador 
-                            <br>william.bayona01@uptc.edu.co 
+                    <div class="position-text-info">
+                        <h4>Camilo Bayona, Desarrollador
+                            <br>william.bayona01@uptc.edu.co
                             <br>Celular: 313 875 15 29</h4>
                     </div>
                 </div>
@@ -146,7 +154,7 @@
                     <div>
                         <img src="<?= base_url() . 'assets/img/omar.png' ?>" class="img-responsive div-info">
                     </div>
-                    <div class="position-text-info"> 
+                    <div class="position-text-info">
                         <h4>Omar Sepúlveda, Desarrollador
                             <br>omar.sepulveda@uptc.edu.co
                             <br>Celular: 311 506 00 70</h4>
@@ -161,7 +169,7 @@
 
                     <fieldset>
                         <div class="text-contact">
-                            <h4>Contacto :<br> 
+                            <h4>Contacto :<br>
                                 Email: arkadevgroup@gmail.com<br>
                                 Facebook: /arkadev.sas<br><br>
                                 Llámanos :<br>

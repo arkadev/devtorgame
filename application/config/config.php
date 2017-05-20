@@ -46,7 +46,7 @@ $config['cache_path'] = '';
 
 $config['cache_query_string'] = FALSE;
 
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'pandalien987';
 
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';

@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script src="<?= base_url() . 'assets/js/jquery.js' ?>"></script>
+        <script src="<?= base_url() . 'assets/js/signUp.js' ?>"></script>
         <link rel="stylesheet" href="<?= base_url() . 'assets/css/styles.css' ?>">
         <link rel="stylesheet" href="<?= base_url() . 'assets/css/material.css' ?>">
 
@@ -29,14 +30,14 @@
                             <h4>DevTorGame</h4>
                         </div>
                         <div class="input-container">
-                            <input type="text"  required="required"/>
+                            <input id="email" type="text"  required="required"/>
                             <label for="#{label}" >
                                 <span class="glyphicon glyphicon-user"></span>
                                 Usuario</label>
                             <div class="bar"></div>
                         </div>
                         <div class="input-container">
-                            <input type="password"  required="required"/>
+                            <input id="password" type="password"  required="required"/>
                             <label for="#{label}">
                                 <span class="glyphicon glyphicon-lock"></span>
                                 Contraseña</label>
@@ -50,7 +51,7 @@
                             <div class="bar"></div>
                         </div>
                         <div class="col-xs-8 col-sm-7 col-md-8  col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-32 col-lg-offset-2">
-                            <button class="btn-login">REGISTRAR</button>
+                            <button class="btn-login" onclick="registerUser()">REGISTRAR</button>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 banner-login-register">
                             <p class="text-banner-register-login">¿Ya tienes cuenta? <a href="<?= base_url() . 'signIn' ?>" class="colo-text-login">Inciar Sesión</a></p>

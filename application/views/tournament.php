@@ -24,14 +24,12 @@
                 <div class="relative-p">
                     <p class="text-menu-team-d"> </p>
                 </div>
-                <a href="<?= base_url() . 'team' ?>?name_tournament=<?= $get_name ?>">
                 <div class="div-menu-team">
                     <button class="btn-menu-team">
                         <img src="<?= base_url() . 'assets/img/tour.png'?>" class="img-btn-menu">
-                        <p class="text-btn-menu-team">Regresar</p>
+                        <p class="text-btn-menu-team">Crear Torneo</p>
                     </button>
                 </div>
-                </a>
             </div>
             <div class="div-tournamet-table">
                 <div class="div-t-t">

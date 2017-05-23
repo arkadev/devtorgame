@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(45) NOT NULL,
   `user_name` varchar(12) NOT NULL,
   `password` varchar(32) NOT NULL,
-  PRIMARY KEY (`email`)
+  PRIMARY KEY (`email`)torneo
 )
 
 CREATE TABLE IF NOT EXISTS `tournament` (

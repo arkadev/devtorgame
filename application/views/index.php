@@ -1,8 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-        Spectral by HTML5 UP
-        html5up.net | @ajlkn
-        Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+        Desarrollado por ARKADEV.
 -->
 <html>
     <head>
@@ -33,10 +31,29 @@
                                     <li><a href="#Cliente">CLIENTES</a></li>
                                     <li><a href="#Equipo">EQUIPO</a></li>
                                     <li><a href="#three">CONTACTO</a></li>
-                                    <li><a href="<?= base_url() . 'signUp' ?>">REGISTRARSE</a></li>
-                                    <li><a href="<?= base_url() . 'signIn' ?>">INICIAR SESIÓN</a></li>
+                                    <?php if ($this->session->userdata('login')) { ?>
+                                        <li><a href="<?= base_url() . 'manager' ?>">Mis TORNEOS</a></li>
+                                        <li><a href="<?= base_url() . 'signIn/logout' ?>">CERRAR SESIÓN</a></li>
+                                    <?php } else { ?>
+                                        <li><a href="<?= base_url() . 'signUp' ?>">REGISTRARSE</a></li>
+                                        <li><a href="<?= base_url() . 'signIn' ?>">INICIAR SESIÓN</a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
+                            <ul class="ul-index">
+                                <li class="li-index"><a href="#banner" class="a1 ">INICIO</a></li>
+                                <li class="li-index"><a href="#one" class="a1 ">INFORMACIÓN</a></li>
+                                <li class="li-index"><a href="#Servicio" class="a1">SERVICIOS</a></li>
+                                <li class="li-index"><a href="#Cliente" class="a1">CLIENTES</a></li>
+                                <li class="li-index"><a href="#Equipo" class="a1">EQUIPO</a></li>
+                                <li class="li-index"><a href="#three" class="a1">CONTACTOS</a></li>
+                                <?php if ($this->session->userdata('login')) { ?>
+                                    <li class="li-index"><a href="<?= base_url() . 'manager' ?>" class="a1">Mis TORNEOS</a></li>
+                                    <li class="li-index"><a href="<?= base_url() . 'signIn/logout' ?>" class="a1">CERRAR SESIÓN</a></li>
+                                <?php } else { ?>
+                                    <li class="li-index"><a href="<?= base_url() . 'signIn' ?>" class="a1">INICIAR SESIÓN</a></li>
+                                <?php } ?>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -46,13 +63,15 @@
                     <h2>Crea tus torneos Online</h2>
                     <p><img src="<?= base_url() . 'assets/img/logoD.png' ?>" class="img-log">DevTorGame</p>
                     <ul class="actions">
-                        <li><a href="<?= base_url() . 'signUp' ?>" class="button special">Registrate</a></li>
+                        <?php if ($this->session->userdata('login')) { ?>
+                            <li><a href="<?= base_url() . 'manager' ?>" class="button special">Comenzar</a></li>
+                        <?php } else { ?>
+                            <li><a href="<?= base_url() . 'signUp' ?>" class="button special">Registrate</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <a href="#one" class="more scrolly">Seguir leyendo</a>
             </section>
-
-            <!-- One -->
             <section id="one" class="wrapper style1 special">
                 <div class="inner">
                     <header class="major">
@@ -66,8 +85,6 @@
                     </ul>
                 </div>
             </section>
-
-            <!-- Two -->
             <section id="two" class="wrapper alt style2">
                 <section id="Servicio" class="spotlight">
                     <div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
@@ -90,8 +107,6 @@
                     </div>
                 </section>
             </section>
-
-            <!-- Three -->
             <section id="three" class="wrapper style3 special">
                 <div class="inner">
                     <header class="major">
@@ -118,8 +133,6 @@
                     </header>
                 </div>
             </section>
-
-            <!-- CTA -->
             <section id="cta" class="wrapper style4">
                 <div class="inner">
                     <header>
@@ -127,13 +140,16 @@
                         <p>Si quieres hacer parte del mundo de los torneos puedes registrarte y vivir tu propia experiencia como administrador de torneos.</p>
                     </header>
                     <ul class="actions vertical">
-                        <li><a href="<?= base_url() . 'signUp' ?>" class="button fit special">REGISTRATE</a></li>
-                        <li><a href="<?= base_url() . 'signIn' ?>" class="button fit">INICAR SESIÓN</a></li>
+                        <?php if ($this->session->userdata('login')) { ?>
+                            <li><a href="<?= base_url() . 'manager' ?>" class="button fit special">Mis TORNEOS</a></li>
+                            <li><a href="<?= base_url() . 'signIn/logout' ?>" class="button fit">CERRAR SESIÓN</a></li>
+                        <?php } else { ?>
+                            <li><a href="<?= base_url() . 'signUp' ?>" class="button fit special">REGISTRARSE</a></li>
+                            <li><a href="<?= base_url() . 'signIn' ?>" class="button fit">INICIAR SESIÓN</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </section>
-
-            <!-- Footer -->
             <footer id="footer">
                 <ul class="icons">
                     <li><a href="https://twitter.com/ArkaDevGroup" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -147,10 +163,6 @@
                     <li>&copy;Copyright arkadev.me 2017 </li><li>Design: <a href="http://arkadev.me/devtorgame">ARKADEV</a></li>
                 </ul>
             </footer>
-
         </div>
-
-
-
     </body>
 </html>

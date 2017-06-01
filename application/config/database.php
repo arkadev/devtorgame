@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default'; $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'arkadev.me',
-	'username' => 'arkadevo_remoto',
-	'password' => 'pandalien987',
-	'database' => 'arkadevo_torneos',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'torneo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -4,9 +4,9 @@ $active_group = 'default'; $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'torneo',
+	'username' => 'arkadevo_remoto',
+	'password' => 'pandalien987',
+	'database' => 'arkadevo_torneos',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

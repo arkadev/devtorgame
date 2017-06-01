@@ -50,7 +50,7 @@ and open the template in the editor.
 							<a href="#" class="text-center colo-text-login">¿Olvidaste tu contraseña?</a>
 						</div> 
 						<div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 banner-login-register">
-							<p class="text-banner-register-login">¿No tienes cuenta? <a href="<?= base_url() . 'signUp' ?>" class="colo-text-login">Regsitrate</a></p>
+							<p class="text-banner-register-login">¿No tienes cuenta? <a href="<?= base_url() . 'signUp' ?>" class="colo-text-login">Registrate</a></p>
 						</div>  
 					</form>
 				</div>

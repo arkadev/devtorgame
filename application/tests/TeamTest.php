@@ -13,7 +13,7 @@ class TeamTest extends PHPUnit_Framework_TestCase
     {
         $team = new Team('Team','1');
         $name = $team->getName();
-        $this->assertEquals('Team_', $name);
+        $this->assertEquals('Team', $name);
     }
 
     function test_it_should_have_a_tournament_id()

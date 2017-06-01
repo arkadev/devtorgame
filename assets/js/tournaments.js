@@ -32,14 +32,13 @@ function coloBtn(id) {
 ;
 
 function insertTournament() {
+	console.log("bannererer");
     var color = document.getElementById("baner-color").style.backgroundColor;
     var name = document.getElementById("name").value;
     var description = document.getElementById("description").value;
-    var image_url = document.getElementById("image-baner").src;
     data = {
         name: name,
         description: description,
-        image_url: image_url,
         color: hexc(color)
     };
     $.ajax({

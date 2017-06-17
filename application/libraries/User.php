@@ -1,8 +1,5 @@
 <?php
 
-/**
- * @author jhonvegamas@gmail.com
- */
 class User
 {
 
@@ -10,7 +7,8 @@ class User
      * Nombre del usuario
      * @var type string
      */
-    private $name;
+    private $email;
+
     /**
      * Contraseña del usuario
      * @var type string
@@ -19,12 +17,12 @@ class User
 
     /**
      * Clase Usuario
-     * @param type $name
+     * @param type $email
      * @param type $password
      */
-    function __construct($name, $password)
+    public function registUser($email, $password)
     {
-        $this->name = $name;
+        $this->email = $email;
         $this->password = $password;
     }
 
@@ -32,7 +30,7 @@ class User
      * Trae la contraseña del usuario
      * @return type string
      */
-    function getPassword()
+    public function getPassword()
     {
         return $this->password;
     }
@@ -41,9 +39,32 @@ class User
      * Trae el nombre del usuario
      * @return type string
      */
-    function getName()
+    public function getEmail()
     {
-        return $this->name;
+        return $this->email;
     }
 
+    /**
+     * Actualiza los atributos del usuario por medio de el arreglo que llega por
+     * la base de datos
+     * @param type $row
+     */
+    public function setUser($row)
+    {
+        if ($row != null) {
+            $this->email = $row->email;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Evalua que la contraseña y el usuario sean correctos
+     * @param User $user
+     */
+    public function login(User $user)
+    {
+            
+    }
 }

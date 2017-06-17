@@ -46,8 +46,8 @@ function insertTournament() {
         url: 'manager/insertTournament',
         data: data,
         type: 'post',
-        success: function () {
-            location.reload();
+        success: function (mensaje) {
+            location.reload();            
         }
     });
 }

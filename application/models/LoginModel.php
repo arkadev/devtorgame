@@ -1,19 +1,30 @@
 <?php
 
+require_once('application/libraries/User.php');
+
 class LoginModel extends CI_Model
 {
+
+    private $user;
 
     public function __construct()
     {
         parent::__construct();
         $this->load->database();
+        $this->user = new User();
     }
 
     public function getUser($email)
-    {
-        $result = $this->db->query("select * from user where email = '$email' LIMIT 1");
+    {   
+        $this->db->select('*');
+        $this->db->form('user');
+        $this->db->where('email',$email);
+        $this->db->query('limit 1');
+        
+//        $result = $this->db->query("select * from user where email = '$email' LIMIT 1");
+        $result = $this->db->get();
         if ($result->num_rows() > 0) {
-            return $result->result();
+            return $result->row;
         } else {
             return false;
         }
@@ -47,4 +58,5 @@ class LoginModel extends CI_Model
             return 0;
         }
     }
+
 }

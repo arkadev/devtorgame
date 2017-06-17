@@ -1,15 +1,19 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
+require_once('application/libraries/User.php');
 
 class Login extends CI_Controller
 {
+
+    private $user;
 
     function __construct()
     {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->model('loginModel');
+        $this->user = new User();
     }
 
     /**
@@ -29,15 +33,16 @@ class Login extends CI_Controller
                     'login' => true
                 );
                 $this->session->set_userdata($data);
-                echo "El usuario " . $this->session->userdata('email') . " se ha logueado";
             } else {
+                echo 'error';
                 header("Location: " . base_url());
             }
         } else {
+            echo 'error';
             header("Location: " . base_url());
         }
     }
-    
+
     public function logout()
     {
         $this->session->sess_destroy();

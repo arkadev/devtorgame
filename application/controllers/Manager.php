@@ -12,9 +12,9 @@ class Manager extends CI_Controller {
         $this->load->model("managerModel");
     }
     /**
-     * Carga el vector con el equipo 
+     * Carga el vector con el equipo
      */
-    public function index() {                
+    public function index() {
         $this->data['tournaments'] = $this->managerModel->getTournaments();
         $this->load->view("manager", $this->data);
     }
@@ -27,6 +27,6 @@ class Manager extends CI_Controller {
         $data['description'] = $this->input->post("description");
         $data['image_url'] = $this->input->post("image_url");
         $data['color'] = $this->input->post("color");
-        $this->managerModel->insertTournament($data, $name);
+        $this->managerModel->insertTournament($data, $name);      
     }
 }

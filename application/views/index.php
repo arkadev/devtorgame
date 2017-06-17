@@ -25,7 +25,7 @@
                         <li class="li-index"><a href="#servicios" class="a1">SERVICIOS</a></li>
                         <li class="li-index"><a href="#clientes" class="a1">CLIENTES</a></li>
                         <li class="li-index"><a href="#clientes" class="a1">EQUIPO</a></li>
-                        <li class="li-index"><a href="#contactos" class="a1">CONTACTOS</a></li>
+                        <li class="li-index"><a href="#contactos" class="a1">CONTACTOS</a></li>                          
 
                     </ul>
                     <ul class="col-md-2 col-lg-3 ul-index">
